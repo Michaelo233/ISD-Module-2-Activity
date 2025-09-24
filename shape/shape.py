@@ -50,7 +50,7 @@ class Shape(ABC):
         pass
 
     @abstractmethod
-    def calculate_perimeter() -> float:
+    def calculate_perimeter(self) -> float:
 
         """
         Abstract method.
