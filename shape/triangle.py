@@ -35,11 +35,14 @@ class Triangle(Shape):
             self.__side_2 = side_2
             self.__side_3 = side_3
         else:
-            raise ValueError("The sides do not satisfy the Triangle Inequality")
+            raise ValueError(f"The sides do not satisfy the Triangle "
+                             + f"Inequality")
         
     def __str__(self):
+        shape_string = super().__str__()
+
+        triangle_string = (f"\nThis triangle has three sides with "
+                + f"lengths of {self.__side_1}, {self.__side_2},"
+                + f" {self.__side_3} centimeters.")
         
-        return (f"The shape color is {self._color}.\n"
-                + f"This triangle has three sides with lengths of "
-                + f"{self.__side_1}, {self.__side_2}, {self.__side_3} "
-                + f"centimeters.")
+        return shape_string + triangle_string
