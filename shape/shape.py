@@ -16,3 +16,13 @@ class Shape(ABC):
     def __str__(self):
         
         return (f"The shape color is {self._color}.")
+    
+    @abstractmethod
+    def calculate_area() -> float:
+
+        pass
+
+    @abstractmethod
+    def calculate_perimeter() -> float:
+
+        pass
