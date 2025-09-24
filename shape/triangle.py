@@ -39,7 +39,7 @@ class Triangle(Shape):
             raise ValueError(f"The sides do not satisfy the Triangle "
                              + f"Inequality")
         
-    def __str__(self) -> float:
+    def __str__(self) -> str:
         shape_string = super().__str__()
 
         triangle_string = (f"\nThis triangle has three sides with "
@@ -61,3 +61,11 @@ class Triangle(Shape):
         area =  math.sqrt(calculate_area)
 
         return float(area)
+    
+    def calculate_perimeter(self) -> float:
+
+        p = (self.__side_1 + self.__side_2 + self.__side_3)
+
+        perimeter = p
+
+        return float(perimeter) 
