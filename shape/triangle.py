@@ -30,9 +30,16 @@ class Triangle(Shape):
         if (side_1 + side_2 > side_3 
             and side_1 + side_3 > side_2 
             and side_2 + side_3 > side_1):
-            
+
             self.__side_1 = side_1
             self.__side_2 = side_2
             self.__side_3 = side_3
         else:
             raise ValueError("The sides do not satisfy the Triangle Inequality")
+        
+    def __str__(self):
+        
+        return (f"The shape color is {self._color}.\n"
+                + f"This triangle has three sides with lengths of "
+                + f"{self.__side_1}, {self.__side_2}, {self.__side_3} "
+                + f"centimeters.")
