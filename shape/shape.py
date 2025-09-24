@@ -3,7 +3,7 @@
 __author__ = "Michael Obikwere"
 __version__ = "1.0.0"
 
-from abc import ABC
+from abc import ABC, abstractmethod
 
 class Shape(ABC):
     def __init__(self, color: str):
@@ -12,3 +12,7 @@ class Shape(ABC):
             self._color = color
         else:
             raise ValueError ("Color cannot be blank.")
+        
+    def __str__(self):
+        
+        return (f"The shape color is {self._color}.")
