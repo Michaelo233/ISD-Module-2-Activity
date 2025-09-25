@@ -7,9 +7,28 @@ from shape.shape import Shape
 import math
 
 class Triangle(Shape):
+    """
+    Subclass Triangle: Triangle shape class.
+    """
 
     def __init__(self, color: str, side_1: int, side_2: int,
                   side_3: int):
+        
+        """
+        Initializes class attributes to corresponding argument value.
+
+        Args:
+            color (str): Represents the color of the Shape.
+            side_1 (int): The length of the triangle in centimeters.
+            side_2 (int): The length of the triangle in centimeters.
+            side_3 (int): The length of the triangle in centimeters.
+
+        Raises:
+            ValueError: When color is blank, When side 1, side 2 and 
+                side 3 are not numeric, When the sides do not satisfy 
+                the triangle inequality theorem.
+        
+        """
         
         super().__init__(color)
 
@@ -40,6 +59,14 @@ class Triangle(Shape):
                              + f"Inequality")
         
     def __str__(self) -> str:
+        """
+        Return string represention of the color and length of the 
+        triangle.
+
+        Returns:
+            str: The color and length of each side of the triangle.
+        """
+
         shape_string = super().__str__()
 
         triangle_string = (f"\nThis triangle has three sides with "
@@ -49,6 +76,12 @@ class Triangle(Shape):
         return (shape_string + triangle_string)
     
     def calculate_area(self) -> float:
+        """
+        Implementing abstract method calculate area.
+
+        Returns:
+            float: Area of the triangle as a float.
+        """
         
         semi_perimeter = ((self.__side_1 + self.__side_2 + self.__side_3)
                            / 2)
@@ -63,6 +96,12 @@ class Triangle(Shape):
         return float(area)
     
     def calculate_perimeter(self) -> float:
+        """
+        Implementing abstract method calculate perimeter.
+
+        Returns:
+            float: perimeter of the triangle as a float.
+        """
 
         p = (self.__side_1 + self.__side_2 + self.__side_3)
 
