@@ -88,8 +88,8 @@ class Triangle(Shape):
         
         sp = semi_perimeter
 
-        calculate_area = (sp * (sp - self.__side_1) * (sp * self.__side_2)
-                          * (sp - self.__side_3))
+        calculate_area = (sp * ((sp - self.__side_1) * (sp - self.__side_2)
+                          * (sp - self.__side_3)))
 
         area =  math.sqrt(calculate_area)
 
