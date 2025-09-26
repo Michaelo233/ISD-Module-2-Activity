@@ -4,7 +4,9 @@ classes.
 
 __author__ = "ACE Faculty"
 __version__ = "1.0.0"
-__credits__ = ""
+__credits__ = "Michael Obikwere"
+
+from shape import *
 
 def main():
     """Test the functionality of the methods encapsulated 
