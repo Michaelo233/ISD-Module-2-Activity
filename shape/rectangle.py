@@ -20,3 +20,13 @@ class Rectangle(Shape):
             self.__width = width
         else:
             raise ValueError("Width must be numeric.")
+
+    def __str__(self):
+
+        shape_string = super().__str__()
+        rectangle_string = (f"\nThis rectangle has four sides length of"
+                            + f" {self.__length}, {self.__width}, "
+                            + f"{self.__length} and {self.__width} "
+                            + f"centimeters.")
+        
+        return (shape_string + rectangle_string)
