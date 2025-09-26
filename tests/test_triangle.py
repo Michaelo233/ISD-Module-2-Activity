@@ -18,12 +18,12 @@ class TestTriangle(unittest.TestCase):
         self.shape = Triangle("Blue", 5, 5, 7)
     
     def test_init_valid_attributes_set(self):
-        shape = Triangle("blue", 5, 5, 7)
+        # shape = Triangle("blue", 5, 5, 7)
 
-        self.assertEqual("blue", shape._color)
-        self.assertEqual(5, shape._Triangle__side_1)
-        self.assertEqual(5, shape._Triangle__side_2)
-        self.assertEqual(7, shape._Triangle__side_3)
+        self.assertEqual("Blue", self.shape._color)
+        self.assertEqual(5, self.shape._Triangle__side_1)
+        self.assertEqual(5, self.shape._Triangle__side_2)
+        self.assertEqual(7, self.shape._Triangle__side_3)
 
     def test_init_blank_color_valueerror_raised(self):
         with self.assertRaises(ValueError):
@@ -31,15 +31,15 @@ class TestTriangle(unittest.TestCase):
 
     def test_init_non_numeric_side_1_valueerror_raised(self):
         with self.assertRaises(ValueError):
-            shape = Triangle("blue", "5", 5, 7)
+            shape = Triangle("Blue", "5", 5, 7)
 
     def test_init_non_numeric_side_2_valueerror_raised(self):
         with self.assertRaises(ValueError):
-            shape = Triangle("blue", 5, "5", 7)
+            shape = Triangle("Blue", 5, "5", 7)
 
     def test_init_non_numeric_side_3_valueerror_raised(self):
         with self.assertRaises(ValueError):
-            shape = Triangle("blue", 5, 5, "7")
+            shape = Triangle("Blue", 5, 5, "7")
 
     def test_str_color_and_triangle_sides_strings_returned(self):
         
