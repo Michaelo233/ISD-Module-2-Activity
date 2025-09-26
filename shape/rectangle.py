@@ -30,3 +30,15 @@ class Rectangle(Shape):
                             + f"centimeters.")
         
         return (shape_string + rectangle_string)
+    
+    def calculate_area(self):
+
+        area = self.__length * self.__width
+
+        return area
+    
+    def calculate_perimeter(self):
+
+        perimeter = (self.__length *2) + (self.__width * 2)
+        
+        return perimeter
