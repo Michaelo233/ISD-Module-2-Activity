@@ -21,29 +21,58 @@ def main():
     print("*************PART 1****************")
 
     # 1. Create an empty list of Shape objects.
-
+    shapes = []
 
     # 2. Code a statement which creates an instance of the Triangle 
     # class.
     # Append the Triangle to the list of shapes.
-
+    try:
+        triangle = Triangle("Blue", 5, 5, 7)
+        shapes.append(triangle)
+    except ValueError as e:
+        print(e)
 
     # 3. Code a statement which creates an instance of the Rectangle 
     # class.
     # Append the Rectangle to the list of shapes.
-
-
+    try:
+        rectangle = Rectangle("Red", 8, 10)
+        shapes.append(rectangle)
+    except ValueError as e:
+        print(e)
 
     # 4. Code 3 additional statements which creates an instance of 
     # Triangle or Rectangle classes (your choice).
     # Append these instances to the list of shapes.
+    try:
+        rectangle = Rectangle("Green", 10, 12)
+        shapes.append(rectangle)
+    except ValueError as e:
+        print(e)
 
+    try:
+        triangle = Triangle("Yellow", 8, 10, 6)
+        shapes.append(triangle)
+    except ValueError as e:
+        print(e)
+
+    try:
+        rectangle = Rectangle("Purple", 5, 3)
+        shapes.append(rectangle)
+    except ValueError as e:
+        print(e)
 
     # 5. Iterate through the list of shapes.  
     # On each iteration:
     # - print the shape
     # - print the area of the shape to 2 decimal places
     # - print the perimeter of the shape to 2 decimal places
+
+    for shape in shapes:
+        
+        print(shape)
+        print(f"Area: {shape.calculate_area():.2f} cm")
+        print(f"Perimeter: {shape.calculate_perimeter():.2f} cm")
 
     # *** END PART 1 ***
 

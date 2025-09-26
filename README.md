@@ -13,4 +13,6 @@ Michael Obikwere
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+- Super and Sub classes.
+- Abstract Methods.
+- Package Initialization.
